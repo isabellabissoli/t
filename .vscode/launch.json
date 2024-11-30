@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Docker: Python - Flask",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "python": {
+                "pathMappings": [
+                    {
+                        "localRoot": "${workspaceFolder}",
+                        "remoteRoot": "/app"
+                    }
+                ],
+                "projectType": "flask",
+                "env": {
+                    "FLASK_APP": "app", // Ajuste aqui para o nome correto do módulo Flask
+                    "FLASK_ENV": "development"
+                },
+            }
+        }
+    ]
+}
